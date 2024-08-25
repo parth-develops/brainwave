@@ -2,6 +2,12 @@ import { curve, heroBackground, robot } from "../assets";
 import Button from "./Button";
 import Section from "./Section";
 import { useRef } from "react";
+import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
+import { heroIcons } from "../constants";
+import { ScrollParallax } from "react-just-parallax";
+import Generating from "./Generating";
+import Notification from "./Notification";
+import CompanyLogos from "./CompanyLogos";
 
 const Hero = () => {
     const parallaxRef = useRef(null);
@@ -50,9 +56,24 @@ const Hero = () => {
                                     height={490}
                                     alt="robot"
                                 />
+                                <ScrollParallax isAbsolutelyPositioned strength={0.04}>
+                                    <Generating className="absolute left-4 right-5 bottom-5 md:left-1/2 md:right-auto md:w-[31rem] md:-translate-x-1/2" />
+                                </ScrollParallax>
+                                <ScrollParallax isAbsolutelyPositioned>
+                                    <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
+                                        {heroIcons.map((icon, index) => (
+                                            <li key={`icon-${index}`} className="p-5">
+                                                <img src={icon} width={24} height={25} alt="" />
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </ScrollParallax>
+                                <ScrollParallax isAbsolutelyPositioned>
+                                    <Notification className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex" title="Code generation" />
+                                </ScrollParallax>
                             </div>
                         </div>
-
+                        <Gradient />
                     </div>
                     <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
                         <img
@@ -63,11 +84,12 @@ const Hero = () => {
                             alt="hero"
                         />
                     </div>
-
+                    <BackgroundCircles />
+                    <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />
                 </div>
 
             </div>
-
+            <BottomLine />
         </Section>
     );
 };
