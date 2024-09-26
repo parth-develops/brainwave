@@ -4,8 +4,16 @@ import Section from "./Section";
 import Arrow from "../assets/svg/Arrow";
 import { GradientLight } from "./design/Benefits";
 import ClipPath from "../assets/svg/ClipPath";
+import card1Img from "../assets/benefits/card-1.svg";
+import card2Img from "../assets/benefits/card-2.svg";
+import card3Img from "../assets/benefits/card-3.svg";
+import card4Img from "../assets/benefits/card-4.svg";
+import card5Img from "../assets/benefits/card-5.svg";
+import card6Img from "../assets/benefits/card-6.svg";
 
 export default function Benefits() {
+    const images = [card1Img, card2Img, card3Img, card4Img, card5Img, card6Img]
+
     return (
         <Section id="features">
             <div className="container relative z-2">
@@ -14,10 +22,10 @@ export default function Benefits() {
                     title="Chat Smarter, Not Harder with Brainwave"
                 />
                 <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center lg:grid-cols-3 gap-8 md:gap-12 lg:gap-6 xl:gap-15">
-                    {benefits.map((item) => (
+                    {benefits.map((item, index) => (
                         <div
                             className="block h-full relative p-0.5 bg-no-repeat bg-[length:100%_100%] max-[559px]:max-w-[20rem]"
-                            style={{ backgroundImage: `url(src/${item.backgroundUrl})` }}
+                            style={{ backgroundImage: `url(${images[index]})` }}
                             key={item.id}
                         >
                             <div className="relative z-2 flex flex-col h-full md:min-h-[18rem] lg:min-h-[22rem] xl:p-[2.4rem] p-[1.5rem] pointer-events-none">
