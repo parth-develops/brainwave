@@ -82,6 +82,14 @@ export default {
         "benefit-card-6": "url(assets/benefits/card-6.svg)",
       },
     },
+    screens: {
+      'xs': '480px',
+      'sm': '560px',
+      'md': '768px',
+      'lg': '992px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    }
   },
   plugins: [
     plugin(function ({ addBase, addComponents, addUtilities }) {
@@ -92,7 +100,7 @@ export default {
             {},
         },
         ".h1": {
-          "@apply font-semibold text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[3.75rem] xl:leading-[4.5rem]":
+          "@apply font-semibold text-[2.1rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[3.75rem] xl:leading-[4.5rem]":
             {},
         },
         ".h2": {

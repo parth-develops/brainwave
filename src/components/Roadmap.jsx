@@ -18,11 +18,11 @@ export default function Roadmap() {
 
                         return (
                             <div
-                                className={`md:flex even:md:translate-y-[7rem] p-0.25 rounded-[2.5rem] ${item.colorful ? "bg-conic-gradient" : "bg-n-6"
+                                className={`md:flex even:md:translate-y-[7rem] p-0.25 rounded-[1.6rem] sm:rounded-[2.5rem] ${item.colorful ? "bg-conic-gradient" : "bg-n-6"
                                     }`}
                                 key={item.id}
                             >
-                                <div className="relative p-8 bg-n-8 rounded-[2.4375rem] overflow-hidden xl:p-15">
+                                <div className="relative p-4 py-6 sm:p-8 bg-n-8 rounded-[1.6375rem] sm:rounded-[2.4375rem] overflow-hidden xl:p-15">
                                     <div className="absolute top-0 left-0 max-w-full">
                                         <img
                                             className="w-full"
@@ -36,19 +36,19 @@ export default function Roadmap() {
                                         <div className="flex items-center justify-between max-w-[27rem] mb-8 md:mb-20">
                                             <TagLine>{item.date}</TagLine>
 
-                                            <div className="flex items-center px-4 py-1 bg-n-1 rounded text-n-8">
+                                            <div className="flex items-center px-2 xs:px-4 py-1 bg-n-1 rounded text-n-8">
                                                 <img
-                                                    className="mr-2.5"
+                                                    className="mr-1.5 xs:mr-2.5"
                                                     src={item.status === "done" ? check2 : loading1}
                                                     width={16}
                                                     height={16}
                                                     alt={status}
                                                 />
-                                                <div className="tagline">{status}</div>
+                                                <div className="tagline text-[10px] xs:text-[12px] font-medium">{status}</div>
                                             </div>
                                         </div>
 
-                                        <div className="mb-10 -my-10 -mx-15">
+                                        <div className="">
                                             <img
                                                 className="w-full"
                                                 src={item.imageUrl}
