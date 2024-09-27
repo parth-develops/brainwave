@@ -25,7 +25,7 @@ export default function Benefits() {
                     {benefits.map((item, index) => (
                         <div
                             className="block h-full relative p-0.5 bg-no-repeat bg-[length:100%_100%] max-[559px]:max-w-[20rem]"
-                            style={{ backgroundImage: `url(/assets/benefits/card-${index + 1}.svg)` }}
+                            style={{ backgroundImage: `url(src/assets/benefits/card-${index + 1}.svg)` }}
                             key={item.id}
                         >
                             <div className="relative z-2 flex flex-col h-full md:min-h-[18rem] lg:min-h-[22rem] xl:p-[2.4rem] p-[1.5rem] pointer-events-none">
