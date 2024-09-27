@@ -4,15 +4,8 @@ import Section from "./Section";
 import Arrow from "../assets/svg/Arrow";
 import { GradientLight } from "./design/Benefits";
 import ClipPath from "../assets/svg/ClipPath";
-// import card1Img from "../assets/benefits/card-1.svg";
-// import card2Img from "../assets/benefits/card-2.svg";
-// import card3Img from "../assets/benefits/card-3.svg";
-// import card4Img from "../assets/benefits/card-4.svg";
-// import card5Img from "../assets/benefits/card-5.svg";
-// import card6Img from "../assets/benefits/card-6.svg";
 
 export default function Benefits() {
-    // const images = [card1Img, card2Img, card3Img, card4Img, card5Img, card6Img]
     const backgroundClasses = [
         "bg-benefit-card-1",
         "bg-benefit-card-2",
@@ -33,7 +26,6 @@ export default function Benefits() {
                     {benefits.map((item, index) => (
                         <div
                             className={`block h-full relative p-0.5 bg-no-repeat bg-[length:100%_100%] max-[559px]:max-w-[20rem] ${backgroundClasses[index]}`}
-                            // style={{ backgroundImage: `url(src/assets/benefits/card-${index + 1}.svg)` }}
                             key={item.id}
                         >
                             <div className="relative z-2 flex flex-col h-full md:min-h-[18rem] lg:min-h-[22rem] xl:p-[2.4rem] p-[1.5rem] pointer-events-none">
