@@ -13,6 +13,14 @@ import ClipPath from "../assets/svg/ClipPath";
 
 export default function Benefits() {
     // const images = [card1Img, card2Img, card3Img, card4Img, card5Img, card6Img]
+    const backgroundClasses = [
+        "bg-benefit-card-1",
+        "bg-benefit-card-2",
+        "bg-benefit-card-3",
+        "bg-benefit-card-4",
+        "bg-benefit-card-5",
+        "bg-benefit-card-6",
+    ];
 
     return (
         <Section id="features">
@@ -24,8 +32,8 @@ export default function Benefits() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 place-items-center lg:grid-cols-3 gap-8 md:gap-12 lg:gap-6 xl:gap-15">
                     {benefits.map((item, index) => (
                         <div
-                            className="block h-full relative p-0.5 bg-no-repeat bg-[length:100%_100%] max-[559px]:max-w-[20rem]"
-                            style={{ backgroundImage: `url(src/assets/benefits/card-${index + 1}.svg)` }}
+                            className={`block h-full relative p-0.5 bg-no-repeat bg-[length:100%_100%] max-[559px]:max-w-[20rem] ${backgroundClasses[index]}`}
+                            // style={{ backgroundImage: `url(src/assets/benefits/card-${index + 1}.svg)` }}
                             key={item.id}
                         >
                             <div className="relative z-2 flex flex-col h-full md:min-h-[18rem] lg:min-h-[22rem] xl:p-[2.4rem] p-[1.5rem] pointer-events-none">
